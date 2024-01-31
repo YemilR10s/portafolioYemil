@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,700&family=Inter:wght@400;700&family=Lexend+Deca&family=Mulish:ital,wght@1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+/* <!-- ------------------- colores ------------------ --> */
+:root{
+    --yellow: #f0bc35;
+    --textos: white;
+    --background1: #191c32;
+    --hover: #2a2f51;
+}
+/* <!-- ------------------- barra menu------------------ --> */
+.barraMenu{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: var(--background1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.barraMenu h2 span{
+    font-size: 1em;
+    color: var(--yellow);
+
+}
+.barraMenu h2{
+    font-size: 2em;
+    color: var(--textos);
+
+}
+.barraMenu ul{
+    display: flex;
+
+}
+.barraMenu ul .fa-xmark{
+    display: none;
+}
+.barraMenu .fa-bars{
+    display: none;
+}
+.barraMenu ul li a{
+    margin: 20px;
+    color: var(--textos);
+    font-size: 1.5em;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
+    
+}
+.barraMenu ul li a:hover{
+    background:  var(--hover);
+    
+}
+
+/* responsive */
+@media (max-width:1024px) {
+    .barraMenu ul li a{
+        font-size: 1em;
+        padding: 20px;
+        
+    }
+    .barraMenu span{
+        font-size: 1.5em;
+    
+    }
+}
+@media (max-width:700px) {
+    .barraMenu ul .fa-xmark{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        font-size: 2em;
+        color: var(--textos);
+        cursor: pointer;
+
+    }
+    .barraMenu .fa-bars{
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        margin: 25px 30px;
+        font-size: 1.5em;
+        color: var(--textos);
+
+    }
+    .barraMenu ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 300px;
+        height: 100vh;
+        top: 0;
+        right:-100%;
+        background: #00504746;
+        transition: 0.5s;
+    
+    }
+    .barraMenu ul.active{
+        right:0;
+
+    }
+}
+
+/* <!-- ------------------- inicio ------------------ --> */
+
+.inicio{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background1);
+
+    
+}
+.inicio .description{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.inicio .description{
+    margin-top: 80px;
+    width: 400px;
+    height: 400px;
+    color: var(--textos);
+}
+.inicio .description h1{
+    font-size: 3em;
+}
+.inicio .description h1 span{
+    color: var(--yellow);
+}
+.inicio .foto{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.inicio .foto .img{
+    width: 400px;
+    height: 500px;
+    /* background-image: url(yemil.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 10px solid;
+    
+}
+.inicio .foto .img img{
+    width: 100%;
+    height: 100%;
+    
+}
+/* responsive */
+@media (max-width:700px) {
+    .inicio{
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+    .inicio .foto{
+        margin-top: 200px;
+        width: 100%;
+        padding: 30px;
+    }
+    .inicio .description{
+        width: 100%;
+        padding: 30px;
+    }
+    
+}
+
+/* <!-- ------------------- quien soy ------------------ --> */
+
+.whoIm{
+    width: 100%;
+    height: 800px;
+    background: var(--textos);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whoIm .img{
+    width: 40%;
+    height: 100vh;
+}
+.whoIm .img img{
+    width: 100%;
+    height: 100%;
+}
+.whoIm .right{
+    width: 60%;
+    height: 100vh;
+}
+.whoIm .right .items{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 50px ;
+}
+.whoIm .right .items h3{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+@media (max-width:700px){
+    .whoIm{
+        flex-direction: column;
+        height: 1000px;
+    }
+    .whoIm .img{
+        width: 100%;
+        padding: 40px;
+    }
+}
+/* <!-- ------------------- portafolios ------------------ --> */
+
+.portafolios{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background: var(--background1);
+}
+
+.portafolios .caja{
+    width: 300px;
+    height: 400px;
+    background: var(--hover);
+}
+@media (max-width:700px){
+    .portafolios{
+        height: 1200px;
+    } 
+}
+@media (max-width:624px){
+    .portafolios{
+        height: 2000px;
+    } 
+    .whoIm .right{
+        width: 100%;
+        padding: 30px;
+          
+    }
+    .whoIm .right .items{
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+    }
+}
+
+/* <!-- ------------------- contactame ------------------ --> */
+.contactame{
+    width: 100%;
+    height: 800px;
+    background: var(--background1);
+    color: var(--textos);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactame .left{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactame .right{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contactame .right form{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.contactame .left .items{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid white;
+}
+@media (max-width:700px){
+    .contactame{
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+    .contactame .left{
+        width: 100%;
+        height: 400px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
