@@ -236,24 +236,46 @@
         padding: 40px;
     }
 }
-/* <!-- ------------------- portafolios ------------------ --> */
+/* <!-- ------------------- Projectos ------------------ --> */
 
-.portafolios{
+.projectos{
     width: 100%;
-    height: 800px;
+    background: var(--background1);
+    
+}
+.projectos h2{
+    text-align: center;
+    padding: 50px;
+    color: var(--textos);
+}
+.projectos .cajasProjectos{  
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2em;
-    background: var(--background1);
+}
+.projectos .caja{
+    width: 300px;
+    height: 200px;
+    background: var(--hover);
+    border-radius: 10px;
+}
+.projectos .caja .items{
+    background-image: url(projecto.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.projectos .caja .items:hover{
+    transform: scale(1.1);
+
 }
 
-.portafolios .caja{
-    width: 300px;
-    height: 400px;
-    background: var(--hover);
-}
 @media (max-width:700px){
     .portafolios{
         height: 1200px;
@@ -307,15 +329,14 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-.contactame .left .items{
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     border: 3px solid white;
+
+}
+.contactame .left img{
+    width: 500px;
+    height: 500px;
+    
+
 }
 @media (max-width:700px){
     .contactame{
@@ -330,4 +351,25 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+/* <!-- ------------------- contactame ------------------ --> */
+
+footer .items{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+footer .items .iconos a i{
+    font-weight: bold;
+    color: black;
+    margin: 10px 10px;
+
 }
