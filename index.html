@@ -10,13 +10,13 @@
 <body>
     <!-- ------------------- barra menu------------------ -->
     <nav class="barraMenu">
-        <h2>Y<span>R</span></h2>
+        <a href="#description"><h2>Y<span>R</span></h2></a>
         <ul class="ul">
             <i class="fa-solid fa-xmark"></i>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Contactame</a></li>
+            <li><a href="#description">Home</a></li>
+            <li><a href="#whoIm">About Me</a></li>
+            <li><a href="#projectos">Proyectos</a></li>
+            <li><a href="#contactame">Contactame</a></li>
         </ul>
         <i class="fa-solid fa-bars"></i>
     </nav>
@@ -25,10 +25,18 @@
 
     <section class="inicio">
 
-        <div class="description">
+        <div class="description" id="description">
             <div class="items">
                 <h1>I'm <span>Yemil</span> Rios</h1>
+                <h1> Frontend <span> Developer</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aliquam. A magni laudantium incidunt, temporibus sed obcaecati commodi rem animi tenetur libero, deleniti aut illum repudiandae voluptatem alias provident ratione!</p>
+            </div>
+            <div class="iconos">
+                <a href="https://www.instagram.com/yemilr10s/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="https://www.linkedin.com/in/yemil-rios-27518b1bb/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+                <a href="https://github.com/YemilR10s" target="_blank"><i class="fa-brands fa-github"></i></a>     
             </div>
         </div>
 
@@ -39,7 +47,7 @@
 
     <!-- ------------------- quien soy  ------------------ -->
 
-    <section class="whoIm">
+    <section class="whoIm" id="whoIm">
         <div class="img">
             <img src="quienSoy.jpeg" alt="">
         </div>
@@ -53,7 +61,7 @@
 
     <!-- ------------------- Proyectos ------------------ -->
 
-    <section class="projectos">
+    <section class="projectos" id="projectos">
         <h2>Algunos Projectos</h2>
         <div class="cajasProjectos">
             <div class="caja">
@@ -117,32 +125,26 @@
 
     <!-- ------------------- contactame  ------------------ -->
 
-    <section class="contactame">
-        <div class="left">
-            <h2>Contactame</h2>
-        </div>
+    <section class="contactame" id="contactame">
+            <h2>Contactame con un Email</h2>
         </div>
         <div class="right">
-            <form action="">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="19dc71e0-fd9e-438e-b6f8-8c27587870cc">
                 <h4>Send me a massage...</h4>
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <input type="text" name="name" placeholder="Escribe tu nombre" required>
+                <input type="email" name="email" placeholder="Escribe tu correo" required>
+                <textarea name="texto" placeholder="Dejame un mensaje"  required></textarea>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
     <!-- ------------------- footer  ------------------ -->
-
+    <hr>
     <footer>
-        <div class="items">
-            <span>Yemil Rios</span>
-            <span>Frontend Developer</span>
-            <div class="iconos">
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>     
-            </div>
+        <p>Yemil Rios &copy; Copyright 2024 </p>
     </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
